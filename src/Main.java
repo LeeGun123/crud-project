@@ -4,5 +4,6 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("crudA Test");
+        System.out.println("crudA Test2");
     }
 }
