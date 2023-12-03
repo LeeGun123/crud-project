@@ -13,6 +13,8 @@ public class Main {
             System.out.println("2. 글목록");
             System.out.println("3. 종료");
 
+            System.out.println("test");
+
             int input = scanner.nextInt();
 
             switch(input) {
