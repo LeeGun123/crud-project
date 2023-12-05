@@ -1,20 +1,48 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CRUD crud = new CRUD();
+        Scanner scanner = new Scanner(System.in);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        while(true) {
+            System.out.println("원하는 작업을 선택해주세요.");
+            System.out.println("1. 글작성");
+            System.out.println("2. 글목록");
+            System.out.println("3. 종료");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+
+            int input = scanner.nextInt();
+
+            switch(input) {
+                //1번 입력시 값을 data 변수에 저장하고 crud클래스 create메소드에 전달되어 ArrayList에 추가함
+                case 1:
+                    System.out.println("작성할 글을 입력해주세요.");
+                    String data = scanner.next();
+                    crud.create(data);
+                    break;
+
+                case 2:
+                    //데이터
+                    System.out.println("글 목록을 출력합니다.");
+                    List<String> dataList = crud.read();
+                    for(String d : dataList) {
+                        System.out.println(d);
+                    }
+                    break;
+
+                case 3:
+                    System.out.println("프로그램을 종료합니다.");
+                    scanner.close();
+                    return;
+                case 4:
+                    System.out.println("삭제할 글");
+                default:
+                    System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+                    break;
+            }
         }
-        System.out.println("test");
-        System.out.println("test2");
-
     }
 }
