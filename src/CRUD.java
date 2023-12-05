@@ -19,13 +19,8 @@ public class CRUD {
     
     //삭제기능 추가
     //삭제할 글 번호를 String으로 받아 삭제 진행
-    public void delete(String boardContent){
-        if(database.contains(boardContent)){
-            int boardIdx = database.indexOf(boardContent);
-            database.remove(boardIdx);
-        } else{
-            System.out.println("존재하지 않는 글입니다.");
-        }
+    public void delete(int articleNum){
+        database.remove(articleNum);
     }
 
 
