@@ -1,7 +1,9 @@
 import java.util.*;
 
 public class Create {
-/*    public ArrayList<HashMap<String, Object>> create() {
+
+    public ArrayList<HashMap<String, Object>> create() {
+
         ArrayList<HashMap<String, Object>> table = new ArrayList<>();
 
         Scanner scanner = new Scanner(System.in);
@@ -12,6 +14,6 @@ public class Create {
         map.put("content", scanner.next());
         table.add(map);
         return table;
-    }*/
+    }
 }
 
