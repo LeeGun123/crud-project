@@ -55,6 +55,7 @@ public class Main {
                             break;
 
                         case 2: // 삭제
+
                             //먼저 글이 있는지 체크(비어있는지 확인)
                             if(table.isEmpty()){
                                 System.out.println("<<<<<글이 없습니다.>>>>>");
@@ -78,6 +79,14 @@ public class Main {
                                 System.out.println("잘못된 글번호입니다.");
                                 continue;
                             }
+
+                            System.out.println("삭제할 글 번호를 입력해주세요.");
+                            input = scanner.nextInt();
+                            scanner.nextLine();
+                            table.remove(input);
+                            break;
+
+
                         case 999:
                             continue;
                     }
