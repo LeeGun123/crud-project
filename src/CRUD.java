@@ -7,7 +7,6 @@ public class CRUD {
     // 데이터를 저장할 공간을 변수 database로 선언
     private List<String> database = new ArrayList<>();
 
-
     // Create
     public void create(String data) {
         database.add(data);
@@ -17,8 +16,12 @@ public class CRUD {
     public List<String> read(){
         return database;
     }
-
-
+    
+    //삭제기능 추가
+    //삭제할 글 번호를 String으로 받아 삭제 진행
+    public void delete(int articleNum){
+        database.remove(articleNum);
+    }
 
 
 }
