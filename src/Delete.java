@@ -1,5 +1,5 @@
 import java.util.*;
-public class Delete {
+public class Delete extends ArticlesFile {
 
     // 글 삭제 메서드
     public void delete (List<Map<String, String>> tableList) {
@@ -8,19 +8,12 @@ public class Delete {
 
         while (true) {
 
-            // 먼저 글이 있는지 체크(비어있는지 확인)
-            if(tableList.isEmpty()){
-                System.out.println("------------");
-                System.out.println("글이 없습니다.");
-                System.out.println("------------");
-                // 글 목록이 없다면 다시 선택으로
-                break;
-            }
-
             // 삭제할 글 번호 입력
             System.out.println("-------------------------");
             System.out.println("삭제할 글 번호를 입력해주세요.");
             System.out.println("-------------------------");
+
+            list(tableList);
 
             int input = scanner.nextInt();
             scanner.nextLine();
@@ -31,12 +24,11 @@ public class Delete {
             if(input != 0 && input <= tableList.size()){
 
                 //인덱스번호를 맞추기 위해 -1 하여 삭제
-                tableList.remove(input-1);
+                tableList.remove(input - 1);
 
                 System.out.println("------------------");
                 System.out.println("삭제가 완료되었습니다.");
                 System.out.println("------------------");
-                System.out.println();
                 break;
             }
 

@@ -9,6 +9,7 @@ public class Main {
         // Map의 자료형을 담을수있는 리스트
         List<Map<String, String>> tableList = new ArrayList<>();
 
+
         while(true) {
 
             // 사용자 화면 출력
@@ -34,6 +35,13 @@ public class Main {
 
                 case 2: // 글 목록 조회 (list)
 
+                    // 글 목록이 있는지 확인
+                    if (listCheck(tableList)) continue;
+
+                    System.out.println("------------------");
+                    System.out.println("글 목록을 출력합니다.");
+                    System.out.println("------------------");
+
                     ArticlesFile articlesFile = new ArticlesFile();
                     articlesFile.listarticles(tableList);
                     break;
@@ -53,5 +61,18 @@ public class Main {
                     break;
             }
         }
+    }
+
+    public static boolean listCheck(List<Map<String, String>> tableList) {
+
+        if (tableList.isEmpty()) {
+            System.out.println("------------");
+            System.out.println("글이 없습니다.");
+            System.out.println("------------");
+
+            // 글 목록이 없다면 다시 선택으로
+            return true;
+        }
+        return false;
     }
 }

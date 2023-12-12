@@ -28,8 +28,16 @@ public class ArticlesFile {
                     System.out.println();
                     break;
 
+                case 3: // 글 내용 조회
+
+                    content(tableList);
+                    System.out.println();
+                    break;
+
                 // 999 입력시 메인화면으로
                 case 999:
+                    return;
+                default:
                     return;
             }
             continue;
@@ -42,34 +50,49 @@ public class ArticlesFile {
 
         while (true) {
 
-            System.out.println("------------------");
-            System.out.println("글 목록을 출력합니다.");
-            System.out.println("------------------");
-
-            System.out.println();
-
-            // List가 가진 데이터 만큼 제목과 내용 출력
-            for (int i = 0; i < tableList.size(); i++){
-
-                // 글 목록 출력
-                // List를 순회하며 Map을 대입하여 키값을 넣어 제목과 내용을 출력
-                System.out.print((i + 1) + ". ");
-                Map<String, String> hashMap = tableList.get(i);
-                System.out.println(hashMap.get("제목") + " " + hashMap.get("내용"));
-            }
-
-            System.out.println();
+            // 글 목록 출력
+            list(tableList);
 
             // 글 목록에서의 선택 기능 출력
             System.out.println("-----------------------");
             System.out.println("원하는 작업을 선택해주세요.");
             System.out.println("-----------------------");
-            System.out.println("1. 글수정 \n2. 글삭제 \n999. 돌아가기");
+            System.out.println("1. 글 수정 \n2. 글 삭제 \n3. 글 내용 조회 \n999. 돌아가기");
 
             System.out.println();
 
             // 선택 입력에 따라 구분
             return scanner.nextInt();
         }
+    }
+
+    public void content(List<Map<String, String>> tableList) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("------------------");
+        System.out.println("조회할 글 번호를 선택하세요.");
+        System.out.println("------------------");
+
+        list(tableList);
+
+        int input = scanner.nextInt();
+        Map<String, String> hashMap = tableList.get(input - 1);
+        System.out.println("----");
+        System.out.println(hashMap.get("내용"));
+        System.out.println("----");
+    }
+
+    public void list(List<Map<String, String>> tableList) {
+
+        for (int i = 0; i < tableList.size(); i++){
+
+            // 글 목록 출력
+            // List를 순회하며 Map을 대입하여 키값을 넣어 제목과 내용을 출력
+            System.out.print((i + 1) + ". ");
+            Map<String, String> hashMap = tableList.get(i);
+            System.out.println(hashMap.get("제목"));
+        }
+        System.out.println();
     }
 }

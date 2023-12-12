@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Modify {
+public class Modify extends ArticlesFile {
 
     // 글 수정 메서드
     public void modify (List<Map<String, String>> tableList) {
@@ -13,6 +13,8 @@ public class Modify {
             System.out.println("-------------------------");
             System.out.println("수정할 글 번호를 입력해주세요.");
             System.out.println("-------------------------");
+
+            list(tableList);
 
             int input = scanner.nextInt();
             scanner.nextLine();
