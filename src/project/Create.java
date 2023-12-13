@@ -1,7 +1,8 @@
+package project;
+
 import java.util.*;
 
 public class Create {
-
     // 글 작성 메서드
     public void writing (List<Map<String, String>> tableList) {
 
@@ -24,7 +25,22 @@ public class Create {
             System.out.println("----------------");
             System.out.println("내용을 입력하세요.");
             System.out.println("----------------");
-            titleOrTextMap.put("내용", scanner.nextLine());
+            System.out.println("다 작성하셨으면 save!를 쳐주세요!");
+
+            StringBuilder content = new StringBuilder();
+            String line;
+
+            while (true) {
+                line = scanner.nextLine();
+                if (line.equalsIgnoreCase("save!")) {
+                    titleOrTextMap.put("내용", content.toString());
+                    System.out.println("저장되었습니다.");
+                    break;
+                }
+                content.append(line).append("\n"); // 개행문자도 받을 수 있게함
+            }
+
+            titleOrTextMap.put("내용", content.toString());
 
             System.out.println();
 
@@ -34,5 +50,3 @@ public class Create {
         }
     }
 }
-
-

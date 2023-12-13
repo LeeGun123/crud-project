@@ -1,5 +1,5 @@
+package project;
 import java.util.*;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,6 +8,7 @@ public class Main {
 
         // Map의 자료형을 담을수있는 리스트
         List<Map<String, String>> tableList = new ArrayList<>();
+        Check listCheck = new Check();
 
 
         while(true) {
@@ -19,8 +20,16 @@ public class Main {
             System.out.println("1. 글작성 \n2. 글목록 \n3. 종료");
             System.out.println();
 
-            // 작업 선택
-            int input = scanner.nextInt();
+            // 숫자가 아닌 문자 입력시 예외 처리
+            int input = 0;
+            try {
+                input = scanner.nextInt();
+            }
+            catch (InputMismatchException e) {
+                System.out.println("-------------------------------");
+                System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+                System.out.println("-------------------------------");
+            }
             scanner.nextLine();
             System.out.println();
 
@@ -36,11 +45,8 @@ public class Main {
                 case 2: // 글 목록 조회 (list)
 
                     // 글 목록이 있는지 확인
-                    if (listCheck(tableList)) continue;
+                    if (listCheck.listCheck(tableList)) continue;
 
-                    System.out.println("------------------");
-                    System.out.println("글 목록을 출력합니다.");
-                    System.out.println("------------------");
 
                     ArticlesFile articlesFile = new ArticlesFile();
                     articlesFile.listarticles(tableList);
@@ -54,25 +60,14 @@ public class Main {
                     scanner.close();
                     return;
 
-                default:
-                    System.out.println("-------------------------------");
-                    System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
-                    System.out.println("-------------------------------");
-                    break;
+                default: // 잘못된 번호 입력시 예외처리
+                    if (input != 0) {
+                        System.out.println("-------------------------------");
+                        System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+                        System.out.println("-------------------------------");
+                        break;
+                    }
             }
         }
-    }
-
-    public static boolean listCheck(List<Map<String, String>> tableList) {
-
-        if (tableList.isEmpty()) {
-            System.out.println("------------");
-            System.out.println("글이 없습니다.");
-            System.out.println("------------");
-
-            // 글 목록이 없다면 다시 선택으로
-            return true;
-        }
-        return false;
     }
 }
