@@ -1,0 +1,50 @@
+body {
+    background-color: #5DC19B
+}
+
+.sign-up-wrraper{
+    width: 400px;
+    height: 700px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: #EEEFF1;
+    margin-left:auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+#main {
+    text-align: center;
+    color: #5DC19B;
+}
+
+.input {
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    width: 300px;
+    border-radius: 5px;
+    position: relative;
+}
+.font {
+    color: #5DC19B;
+}
+.name {
+    font-size: 15px;
+    padding: 8px;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+}
+.sign-up{  
+    font-size: 15px;
+    border: none;
+    padding: 10px;
+    width: 320px;
+    background-color: #5DC19B;
+    margin: auto;
+    color: white;
+    position: absolute;
+    top: 620px;
+    border-radius: 5px;
+}
