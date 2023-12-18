@@ -1,0 +1,144 @@
+#main-container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: darkcyan; */
+    flex-wrap: nowrap;
+}
+.box{
+    /* background-color: blueviolet; */
+
+    width: 33%;
+}
+
+
+.center-box{
+    /* background-color: blanchedalmond; */
+    height: 15%;
+}
+
+
+/*가운데*/
+#center-container{
+    width: 50%;
+}
+
+#center-top{
+    height: 15%;
+    margin-bottom: 2px;
+}
+
+#center-center{
+    height: 70%;
+    
+}
+
+#center-bottom{
+    height: 15%;
+    text-align: center;
+    margin-top: 70px;
+}
+
+/*게시판 글목록부분*/
+/*네비게이션*/
+#center-center-top{
+
+    height: 10%;
+}
+/*글목록*/
+#center-center-center{
+    height: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#center-center-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/*왼쪽*/
+#left-container{
+    width: 25%;
+}
+
+/*오른쪽*/
+#right-container{
+    width: 25%;
+}
+#right-top{
+    /* background-color: chocolate; */
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    text-align: center;
+
+}
+#right-center{
+    height: 70%;
+
+}
+#right-bottom{
+    height: 10%;
+
+}
+
+/*글목록*/
+#bulletin-board{
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: gray;
+    text-align: center;
+}
+
+#myPageLogo{
+    /* font-size: 18px; */
+    font-weight: 800;
+    
+}
+
+/*프로필관리*/
+#profile-manage-nav{
+    width: 30%;
+    background-color:beige;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+#profile-manage-config{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+
+#config-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/*마이페이지 정보변경란들*/
+#config-center-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+img{
+    object-fit: cover;
+}
