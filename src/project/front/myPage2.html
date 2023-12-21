@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="myPage.css">
+</head>
+  <body>
+    <!--메인 flex-->
+    <div id="main-container" class="flex-box">
+      <!--왼쪽-->
+      <div id="left-container" class="box">1
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!--가운데-->
+      <div id="center-container" class="box">
+        <div id="center-top" class="center-box"><img src="img.png" width="100%" height="100%"></div>
+         <!--게시판 글목록부분-->
+        <div id="center-center" class="center-box">
+          <!--네비게이션-->
+          <div id="center-center-top">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <!-- 링크 추가 -->
+                  <a href="mainPage.html">
+                    <img src="tree.png" alt="tree" style="width: 50px; height: 50px; padding:8px">
+                  </a>
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a id="myPageLogo" class="nav-link active" aria-current="page" href="#">마이페이지</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">작성글</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">작성댓글</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="C:\projects\html-css\side-project\myPage3.html">프로필관리</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <!--글목록-->
+          <!--체크박스/ 글번호 /글제목 / 작성일 / 조회수-->
+          <div id="center-center-center">
+            <table id="bulletin-board" class="table">
+              <colgroup>
+                <col>
+                <col>
+                <col>
+              </colgroup>
+              <thead>
+                <tr id="bulletin-board-head">
+                  <th scope="col">체크</th>
+                  <th scope="col">글번호</th>
+                  <th scope="col">댓글</th>
+                  <th scope="col">작성일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><input type="checkbox"></th>
+                  <td>00001</td>
+                  <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                  <td>2023.12.15</td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>00001</td>
+                    <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                    <td>2023.12.15</td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>00001</td>
+                    <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                    <td>2023.12.15</td>
+                </tr>
+                <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>00001</td>
+                    <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                    <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>00001</td>
+                    <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                    <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>00001</td>
+                    <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                    <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+                  <tr>
+                      <th scope="row"><input type="checkbox"></th>
+                      <td>00001</td>
+                      <td>길이에 따라 박스 달라짐. 박스크기를 fix or 보여지는 글 길이 제한.</td>
+                      <td>2023.12.15</td>
+                  </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <!--전체선택 / 삭제버튼 / 페이징-->
+          <div id="center-center-bottom">
+            <div><button type="button" class="btn btn-primary">전체선택</button></div>
+          <!--페이징-->
+          <div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">이전</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item"><a class="page-link" href="#">다음</a></li>
+              </ul>
+            </nav>
+          </div>
+          <!--삭제버튼-->
+          <div><button type="button" id="myPage-deleteButton" class="btn btn-danger">삭제하기</button></div>
+          </div>
+        </div>
+        <!--게시판 footer-->
+        <div id="center-bottom" class="center-box">
+
+
+        </div>
+      </div>
+      <!--오른쪽-->
+      <div id="right-container" class="box">
+        <div id="right-top">
+          <br><br>
+          <p>반갑습니다, OOO님</p>
+          <p>작성글 : 000개</p>
+          <p>작성 댓글 : 000개</p>
+          <p>likelion@lionworld.com</p>
+          <div id="simpleInfo">
+            <button type="button" class="btn btn-warning" onclick="location.href='myPage3.html'">마이페이지</button>
+            <button type="button" class="btn btn-danger">로그아웃</button>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

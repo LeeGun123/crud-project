@@ -1,0 +1,33 @@
+.title {
+    font-weight: bold;
+}
+
+.subtitlebody {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.subtitlebox {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 13px;
+}
+
+.subtitle {
+    font-weight: bolder;
+    color: black;
+    display: flex;
+    flex-grow: 1;
+}
+
+.uploadtime {
+    font-size: 15px;
+    color: gray;
+    margin-right: 3%;
+}
+
+.writer {
+    font-size: 15px;
+    font-weight: bolder;
+}
